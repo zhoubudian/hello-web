@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/lrtk.css">
+
+<link rel="stylesheet" href="css/reset.css" type="text/css" />
+
+<style>
+#ad{ width: 900px; height: 500px; position: fixed; top: 13%; left: 16%;z-index: 999; display: none;}
+#ad .close{ width: 20px; height: 20px; font-size: 20px; font-color: #000000; position: absolute;right: 0;top: 0;}
+#header{ position:fixed;z-index:100; top:0; left: 0;}
+#header .nav{  height:78px; background:#fff; width:1349px; }
+#header .nav .logo{ width:192px; height:58px; float:left; margin-left:15px; margin-top:15px;}
+#header .nav .navigation{ width:625px; height:78px;  margin-left:10px; float:left; position:relative; z-index:100;}
+#header .nav .navigation ul li{ position:relative; float:left; width:125px; height:75px;  }
+#header .nav .navigation ul li a{ width:125px; height:75px;  display:block; font-size:16px; font-weight:bold; line-height:75px; text-align:center; color:#000;text-decoration:none;}
+#header .nav .navigation ul li ul{position:absolute; left:0; top:76px;font-size:16px; font-weight:200; display:none;height:225px;}
+#header .nav .navigation ul li ul li a{ border:1px solid #CCC; border-top:none; background:#FFF;}
+#header .nav .navigation ul li:hover{ border-bottom:2px solid #e94a2b; color:#e94a2b; transition:0.1s;}
+#header .nav .navigation ul li:hover ul{display:block;transition:0.1s;}
+#header .nav .login{ width:111px; height:78px;  float:right; margin-right:10px;}
+#header .nav .login ul li{ padding-top:5px; font-size:14px; text-decoration:none; padding-left:10px; color:#000;}
+#header .nav .login ul li span{ padding-left:30px;}
+#header .nav .login ul li span a{ color:#000;}
+#header .nav .login ul li.a{ float:right; margin-right:10px;}
+
+
+#banner .photo{ height:599px;  position:relative; z-index:0;}
+
+
+#content .photone{ width:1320px; height:723px;margin-left:15px; margin-top:20px;}
+#content .photone .pleft{ float:left;width:650px; height:719px; margin-top:4px;}
+#content .photone .pleft ul{ position:relative;width:650px; height:719px; }
+#content .photone .pleft ul li img{ transform:scaleX(0.98);}
+#content .photone .pleft ul:hover li img{ transform:scaleX(1);transition:1s;}
+#content .photone .pleft ul li.font{width:650px; height:719px; display:block; background:rgba(0,0,0,.5); opacity:0; transition:1s;position:absolute; left:0; top:0;}
+#content .photone .pleft ul:hover li.font{opacity:1; transition:1s; }
+#content .photone .pright{ float:right; width:650px; height:719px; margin-top:4px;}
+#content .photone .pright ul{ position:relative; width:650px; height:349px; margin-top:5px; }
+#content .photone .pright ul li img{ transform:scaleX(0.98);}
+#content .photone .pright ul:hover li img{ transform:scaleX(1); transition:1s;}
+
+#content .photone .pright ul li.fornt{ width:0;  height:349px; display:block; background:rgba(0,0,0,.5); position:absolute; left:0; top:0; opacity:0; transition:1s;}
+#content .photone .pright ul:hover li.fornt{ opacity:1; transition:1s; width:650px; }
+#content .photone .pright ul li.fornt ul{ color:#FFF;  margin-left:40px;}
+#content .photone .pright ul li.fornt ul li{ padding-top:15px;} 
+#content .photone .pright ul li.fornt ul li.two{ font-size:16px; font-weight:600;padding-top:300px; }
+#content .tuwen { width:1346px; height:383px;  margin-left:3px; padding-left:20px; border-bottom:1px solid #CCC;}
+#content .tuwen ul{ width:196px; height:219px; background:#FFF; margin-top:82px; margin-left:105px; float:left; }
+#content .tuwen ul li.tone img{transition:2s;padding-left:40px; text-align:center;}
+#content .tuwen ul:hover li.tone img{ transform:rotate(10deg); transition:2s;}
+#content .tuwen ul li.ttwo a{ font-size:18px; font-weight:bold; padding-left:65px; padding-top:10px; color:#333;text-decoration:none;}
+#content .tuwen ul li.tthree a{ font-size:14px; padding-left:45px; padding-top:10px; color:#999;text-decoration:none;}
+#content .tuwen ul:hover li{ transform:scaleX(1.05); transition:2s;}
+#content .tuwen ul.uone li.tone img{transition:2s;padding-left:5px; text-align:center;}
+#content .tuwen ul.utwo li.tone img{transition:2s;padding-left:25px; text-align:center;}
+#content .tulink{ width:1350px; height:281px; margin-left:0px;}
+#content .tulink ul span{ padding-left:0px;}
+#content .tulink ul span:hover img{ transform:scaleX(1.09);}
+#content .newActivity{ width:1348px; height:344px; background:#f5f5f5; margin-top:20px;}
+#content .newActivity .new{ width:373px; height:344px;  margin-left:85px; float:left;}
+#content .newActivity .new .none{ width:89px; height:55px; font-size:20px; font-weight:bold; color:#000; padding-top:30px;}
+#content .newActivity .new ul{ width:350px; height:59px; padding-top:20px; margin-top:20px;}
+#content .newActivity .new ul li a{ font-size:15px; color:#000;}
+#content .newActivity .new ul li:hover a{ color:#39F;}
+#content .newActivity .activity{ width:763px; height:344px;  float:right; margin-right:85px;}
+#content .newActivity .activity .acone{width:130px; height:55px; font-size:20px; font-weight:bold; color:#000; padding-top:30px; padding-left:40px; }
+#content .newActivity .activity ul{ width:342px; height:259px; float:left; margin-left:30px;}
+#content .newActivity .activity ul li.actone{  margin-top:40px; width:341px; height:149px;  padding-left:10px;}
+#content .newActivity .activity ul li.actwo{ font-size:18px; color:#000; margin-top:15px;  padding-left:10px; }
+#content .newActivity .activity ul li.acthree{ font-size:16px; color:#333; padding-top:10px; padding-left:10px; }
+
+#footer{ width:1346px; height:370px; background:#272727; margin-top:5px;}
+#footer .ftop{ width:1346px; height:275px; border-bottom:2px solid #414141;}
+#footer .ftop .ftleft{ float:left; width:867px; height:275px; }
+#footer .ftop .ftleft .ftopone{ float:left; margin-left:80px; width:130px; height:260px;}
+#footer .ftop .ftleft .ftopone .ftone{padding-top:20px; width:76px; height:50px; font-size:18px; color:#cdced2;width:130px;}
+#footer .ftop .ftleft .ftopone ul{ width:130px;  margin-top:5px; height:200px; }
+#footer .ftop .ftleft .ftopone ul li{ margin-top:3px;}
+#footer .ftop .ftleft .ftopone ul li a{ color:#cdced2; font-size:16px; }
+#footer .ftop .ftright{ width:168px; height:270px; float:right;  margin-right:270px;}
+#footer .ftop .ftright ul li.ftra{ font-size:18px; color:#cdced2; margin-top:20px; margin-left:10px;}
+#footer .ftop .ftright ul li.ftrb{ margin-top:10px; margin-left:10px;}
+#footer .ftop .ftright ul li.ftrc{ margin-top:10px; margin-left:10px;}
+#footer .ftop .ftright ul li.ftrd{ margin-top:10px; margin-left:10px; color:#cdced2; font-size:18px;}
+#footer .fdown{ widows:1346px; height:93px;}
+#footer .fdown .fdone{ width:500px; height:93px; float:left;}
+#footer .fdown .fdone li{ margin-left:80px; line-height:93px; color:#cdced2; font-size:14px;}
+#footer .fdown .fdone li a{ padding-left:15px; color:#cdced2;}
+#footer .fdown .fdtwo{ width:230px; height:93px; float:right; margin-right:80px;}
+#footer .fdown .fdtwo ul li{ width:75px;  font-size:14px; color:#cdced2; border-right:2px solid #cdced2; float:left; margin-top:40px; padding-left:5px; line-height:14px;}
+#footer .fdown .fdtwo ul li.enda{ border-right:none;}
+
+</style>
+</head>
+<body>
+<!--header begin-->
+<div id="ad">
+    <div class="close">X</div>
+    <img src="images/i1.jpg">
+</div>
+<div id="header">
+ 
+    <div class="nav">
+        <div class="logo">
+            <img src="images/a.jpg" />
+        </div>
+        <div class="navigation ">
+           <ul>
+              <li><a href="index-2.html">首页</a></li>
+              <li><a href="erji-4.html">手机系列</a>
+                 <ul>
+                     <li><a href="#">XPlay系列</a></li>
+                     <li><a href="#">X系列</a></li>
+                     <li><a href="#">Y系列</a></li>
+                 </ul>
+              </li>
+              <li><a href="erji-3.html">Flyme平台</a></li>
+              <li><a href="erji-1.html">商场</a></li>
+              <li><a href="erji-2.html">服务</a></li>
+           </ul>
+        </div>
+        <div class="login">
+           <ul>
+             <li>登录<span><a href="register.html">注册</a></span></li>
+             <li class="a"><img src="images/b.jpg" /></li>
+           </ul>
+        </div>
+    </div>
+    
+</div>
+<!--header end-->
+<!--banner begin-->
+<div id="banner">
+  <div class="photo">
+    <!-- 代码 开始 -->
+<div class="container-fluid text-center">
+    <div class="header">
+        <img class="headerImg"
+             src="images/header.jpg"
+             data-slideshow='images/img1.jpg|images/img2.jpg|images/img3.jpg'>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.hammer-full.min.js"></script>
+<script src="js/plugin.js"> </script>
+<script src="js/lrtk.js"></script>
+<script>
+var links = ["http://www.lanrentuku.com", "http://www.lanrentuku.com/lanren/", "http://www.lanrentuku.com/js/biaoqian.html", "http://www.lanrentuku.com/js/xiangce.html"];
+$(".slide").click(function(){
+    var index = $(this).attr('index');
+	if(index === undefined) {
+		window.open(links[0]);
+	} else {
+		window.open(links[(parseInt(index)+1)]);
+	}
+
+});
+</script>
+<!-- 代码 结束 -->
+  </div>  
+</div>
+<!--banner end-->
+<!--content begin-->
+<div id="content">
+     <div class="photone">
+      <div class="pleft">
+         <ul>
+              <li><a href="#"><img src="images/e.jpg" /></a></li>
+              <li class="font"></li>
+         </ul> 
+      </div>
+      <div class="pright">
+          <ul>
+             <li><a href="#"><img src="images/QQ图片20170727083702.jpg" /></a></li>
+             <li class="fornt">
+               <ul>
+                  
+                  <li class="two">视频正成为新的基础业务，并成为运营商增长新的动力</li>
+               </ul>
+             </li>
+          </ul>
+           <ul>
+             <li><a href="#"><img src="images/QQ图片20170727083702.jpg" /></a></li>
+             <li class="fornt">
+               <ul>
+                  
+                  <li class="two">视频正成为新的基础业务，并成为运营商增长新的动力</li>
+               </ul>
+             </li>
+          </ul>
+      </div>
+    </div>
+    <div class="tuwen"> 
+       <ul>
+          <li class="tone"><img src="images/fuli.jpg" />
+          <li class="ttwo"><a href="#">魅有福利</a></li>
+          <li class="tthree"><a href="#">各种惊喜等你开启</a></li>
+       </ul>
+       <ul class="uone">
+          <li class="tone"><img src="images/sji.jpg" />
+          <li class="ttwo"><a href="#">魅有福利</a></li>
+          <li class="tthree"><a href="#">各种惊喜等你开启</a></li>
+       </ul>
+       <ul class="uone">
+          <li class="tone"><img src="images/sjil.jpg"/>
+          <li class="ttwo"><a href="#">魅有福利</a></li>
+          <li class="tthree"><a href="#">各种惊喜等你开启</a></li>
+       </ul>
+       <ul class="utwo">
+          <li class="tone"><img src="images/sjiii.jpg" />
+          <li class="ttwo"><a href="#">魅有福利</a></li>
+          <li class="tthree"><a href="#">各种惊喜等你开启</a></li>
+       </ul>
+    </div>
+    <div class="tulink">
+       <ul>
+           <span><img src="images/aone.jpg" /></span>
+           <span><img src="images/atwo.jpg" /></span>
+           <span><img src="images/athree.jpg" /></span>
+       </ul>
+    </div>
+    <div class="newActivity">
+       <div class="new">
+          <div class="none">
+              新品发布
+          </div>
+          <ul>
+             <li><a href="">2017年4月2日XPlay系列在北京某某公司举行新品发布会，此次发布会由某某主持</a></li>
+             <li>2017-04-05</li>
+          </ul>
+          <ul>
+             <li><a href="">2017年4月2日XPlay系列在北京某某公司举行新品发布会，此次发布会由某某主持</a></li>
+             <li>2017-04-05</li>
+          </ul>
+          <ul>
+             <li><a href="">2017年4月2日XPlay系列在北京某某公司举行新品发布会，此次发布会由某某主持</a></li>
+             <li>2017-04-05</li>
+          </ul>
+       </div>
+       <div class="activity">
+          <div class="acone">
+              展品活动
+          </div>
+          <ul>
+             <li class="actone"><a href="nr-2.html"><img src="images/oneaa.jpg" /></a></li>
+             <li class="actwo">2017 运营转型峰会</li>
+             <li class="acthree">转型，向数字商业迈进</li>
+             <li class="acthree">中国，香港9月18日-19日</li>
+          </ul>
+          <ul>
+             <li class="actone"><img src="images/twoaaa.jpg" /></li>
+             <li class="actwo">2017 华为用户大会</li>
+             <li class="acthree">聆听 合作 改进</li>
+             <li class="acthree">中国，西安7月3日-4日</li>
+          </ul>
+       </div>
+    </div>
+   
+</div>
+<!--content end-->
+<!--footer begin-->
+    <div id="footer">
+       <div class="ftop">
+        <div class="ftleft">
+         <div class="ftopone">
+          <div class="ftone">按访问者</div>
+          <ul>
+             <li><a href="#">个人用户</a></li>
+             <li><a href="#">企业用户</a></li>
+             <li><a href="#">运营商用户</a></li>
+             <li><a href="#">新闻媒体</a></li>
+             <li><a href="#">合作伙伴</a></li>
+             <li><a href="#">开发者</a></li>
+             <li><a href="#">供应商</a></li>
+             <li><a href="#">求职者</a></li>
+          </ul>
+        </div>  
+        <div class="ftopone">
+          <div class="ftone">关于华为</div>
+          <ul>
+             <li><a href="#">公司简介</a></li>
+             <li><a href="#">公司治理</a></li>
+             <li><a href="#">运营商用户</a></li>
+             <li><a href="#">新闻媒体</a></li>
+             <li><a href="#">合作伙伴</a></li>
+             <li><a href="#">开发者</a></li>
+             <li><a href="#">供应商</a></li>
+             <li><a href="#">求职者</a></li>
+          </ul> 
+        </div>  
+        <div class="ftopone">
+          <div class="ftone">新闻 & 展会者</div>
+          <ul>
+             <li><a href="#">个人用户</a></li>
+             <li><a href="#">企业用户</a></li>
+             <li><a href="#">运营商用户</a></li>
+             <li><a href="#">新闻媒体</a></li>
+             <li><a href="#">合作伙伴</a></li>
+             <li><a href="#">开发者</a></li>
+             <li><a href="#">供应商</a></li>
+             <li><a href="#">求职者</a></li>
+          </ul>
+        </div>  
+        <div class="ftopone">
+          <div class="ftone">快速链接</div>
+          <ul>
+             <li><a href="#">华为商城</a></li>
+             <li><a href="#">荣耀官网 </a></li>
+             <li><a href="#">华为海洋</a></li>
+             <li><a href="#">产品定义社区</a></li>
+             <li><a href="#">合作伙伴</a></li>
+             <li><a href="#">开发者</a></li>
+             <li><a href="#">供应商</a></li>
+             <li><a href="#">求职者</a></li>
+          </ul>
+        </div>
+       </div>   
+        <div class="ftright">
+           <ul>
+               <li class="ftra">关注我们</li>
+               <li class="ftrb"><img src="images/wbin.jpg" /></li>
+               <li class="ftrc"><img src="images/wx.jpg" /></li>
+               <li class="ftrd">官方微信</li>
+           </ul>
+        </div>
+      </div>
+        <div class="fdown">
+          <div class="fdone">
+             <li>&copy 2017华为技术有限公司<a href="#">粤A2-20044005号</a></li>
+          </div>
+          <div class="fdtwo">
+             <ul>
+               <li>法律声明</li>
+               <li>隐私保护</li>
+               <li class="enda">联系我们</li>
+             </ul>
+          </div> 
+       </div>
+       
+    </div>
+<!--footer end-->
+<script>
+   var oAd=document.getElementById("ad");
+   var oClose=document.getElementsByClassName("close")[0];
+
+   oClose.onclick=function () {
+       oAd.style.display="none";
+   }
+    setTimeout(function () {
+        oAd.style.display="block";
+    },1000);
+     setTimeout(function () {
+         oAd.style.display="none";
+     },7000)
+
+</script>
+</body>
+</html>

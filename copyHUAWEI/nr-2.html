@@ -1,0 +1,499 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link type="text/css" rel="stylesheet" href="css/reset.css"/>
+<style>
+#header .nav{  height:78px; background:#FFF; width:1349px; }
+#header .nav .logo{ width:192px; height:58px; float:left; margin-left:15px; margin-top:15px;}
+#header .nav .navigation{ width:625px; height:78px;  margin-left:10px; float:left; position:relative; z-index:100;}
+#header .nav .navigation ul li{ position:relative; float:left; width:125px; height:75px;  }
+#header .nav .navigation ul li a{ width:125px; height:75px;  display:block; font-size:16px; font-weight:bold; line-height:75px; text-align:center; color:#000;text-decoration:none;}
+#header .nav .navigation ul li ul{position:absolute; left:0; top:76px;font-size:16px; font-weight:200; display:none;height:225px;}
+#header .nav .navigation ul li ul li a{ border:1px solid #CCC; border-top:none; background:#FFF;}
+#header .nav .navigation ul li:hover{ border-bottom:2px solid #e94a2b; color:#e94a2b; transition:0.1s;}
+#header .nav .navigation ul li:hover ul{display:block;transition:0.1s;}
+#header .nav .login{ width:111px; height:78px;  float:right; margin-right:10px;}
+#header .nav .login ul li{ padding-top:5px; font-size:14px; text-decoration:none; padding-left:10px; color:#000;}
+#header .nav .login ul li span{ padding-left:30px;}
+#header .nav .login ul li.a{ float:right; margin-right:10px;}
+
+#banner{ background:url(images/rqi.jpg) no-repeat; width:100%; height:430px;}
+#banner .date{ width:171px; height:69px;  margin-left:70px; margin-top:230px; border:none;}
+.clear{ clear:none;}
+
+#content .top{  height:368px;}
+#content .top .left{ width:571px; height:368px; background: url(images/leftp.jpg) no-repeat; float:left;}
+#content .top .left ul{ position:relative; width:55px; height:56px; margin-top:170px; margin-left:260px}
+#content .top .left ul li a{ z-index:100;position:relative;}
+#content .top .left ul li.font{ width:60px; height:60px; background:rgba(245,110,105,.4); opacity:1; position:absolute; left:-8px;top:-8px; z-index:0;}
+#content .top .left ul:hover li.font{  transition:0.5s; border-radius:30px;background:rgba(208,206,206,.4);}
+#content .top .right{ width:421px; height:368px; float:right;}
+#content .top .right ul dt{ color:#000; font-size:42px; font-weight:400; margin-top:70px; margin-left:40px;}
+#content .top .right ul dd{ color:#999; font-size:16px; margin-top:60px; margin-left:40px;}
+#content .middle{ height:395px;  margin-top:20px;}
+#content .middle .mtop{ width:245px; height:68px;  margin-top:10px; margin-left:400px;}
+#content .middle .mtop li{ color:#000; font-size:20px; text-align:center; line-height:68px;}
+#content .middle .mdown{ height:305px;  margin-top:10px;}
+#content .middle .mdown div{ width:220px; height:295px;  border:1px solid #999;float:left; margin-left:35px;}
+#content .middle .mdown div ul{ height:290px;}
+#content .middle .mdown div p{ height:5px; width:100px; background:#F93; margin-left:60px; opacity:0; box-shadow:0px 0px 20px #CCCCCC;}
+#content .middle .mdown div ul dt{ padding-top:50px; padding-left:50px; }
+#content .middle .mdown div ul dd{ text-align:center; color:#999; font-size:16px; padding-top:2px; }
+#content .middle .mdown .one{ float:left; margin-left:0px;}
+#content .middle .mdown .two{ float:right; margin-right:0px;}
+#content .middle .mdown div:hover{ transform:scale(1.01);transition:0.1s;}
+#content .middle .mdown div:hover p{ opacity:1; transition:0.1s;}
+#content .middleA{ height:480px; width:100%; margin-top:30px;}
+#content .middleA ul{ width:316px; height:480px; position:relative; float:left; margin-left:25px;}
+#content .middleA ul.mleft{ float:left; margin-left:0;}
+#content .middleA ul.mright{ float:right;}
+#content .middleA ul li.font{width:313px; height:476px; position:absolute; left:0px; top:0px; background:rgba(0,0,0,.3); opacity:0;}
+#content .middleA ul li.font ul li{ height:42px; width:112px; background:#F00;line-height:42px;text-align:center; margin-left:-20px; margin-top:200px; float:left;}
+#content .middleA ul li.font ul li a{ font-size:18px; color:#FFF;}
+#content .middleA ul:hover li.font{ opacity:1; transition:0.2s;}
+#content .middleA ul:hover li.font ul li a{ text-decoration:none;}
+#content .welcome{ height:518px;  margin-top:20px;}
+#content .welcome .wel{ width:184px; height:84px;  margin-top:10px; margin-left:420px; color:#000; font-size:36px; font-weight:700; text-align:center; line-height:84px;}
+#content .welcome .come{ height:387px;  margin-top:30px;}
+#content .welcome .come .left{ width:722px; height:387px; float:left; }
+#content .welcome .come .left p{ color:#898989; font-size:18px; padding-top:30px;}
+#content .welcome .come .right{ width:230px; height:387px; float:right; }
+#content .welcome .come .right p{ width:230px; height:235px; margin-top:30px;}
+#content .welcome .come .right .name ul{ width:141px; height:120px; }
+#content .welcome .come .right .name ul dt{ color:#898989; font-size:18px; padding-top:10px;}
+#content .welcome .come .right .name ul dd{ color:#898989; font-size:14px; padding-top:3px;}
+#content .meeting{ height:750px;  margin-top:10px;}
+#content .meeting p{ width:220px; height:90px;  margin-left:400px; color:#000; font-size:36px; font-weight:700; text-align:center; line-height:90px;}
+#content .meeting .meone{ width:333px; height:608px; float:left; margin-top:30px; border-left:1px solid #999;}
+#content .meeting .meone .images{ margin-top:45px; margin-left:30px;}
+#content .meeting .meone .date{ width:164px; height:31px; background:#FFF; margin-top:25px; margin-left:30px;}
+#content .meeting .meone .time{ width:154px; height:65px; background:#FFF; margin-top:30px; margin-left:30px;}
+#content .meeting .meone .time ul dt{ color:#F30; font-size:17px; font-style:italic;}
+#content .meeting .meone .time ul dd{ color:#898989; font-size:17px; padding-top:5px;}
+#content .meeting .meone .afternoon{ width:154px; height:100px; background:#FFF;margin-top:30px; margin-left:30px;}
+#content .meeting .meone .afternoon ul dt{ color:#F30; font-size:17px; font-style:italic;}
+#content .meeting .meone .afternoon ul dd{ color:#898989; font-size:17px; padding-top:5px;}
+#content .meeting .meone .evening{width:154px; height:65px; background:#FFF;margin-top:30px; margin-left:30px;}
+#content .meeting .meone .evening ul dt{ color:#F30; font-size:17px; font-style:italic;}
+#content .meeting .meone .evening ul dd{ color:#898989; font-size:17px; padding-top:5px;}
+#content .meeting .meone .end{ width:200px; height:5px; background:#FF4A31; margin-top:140px; margin-left:65px; opacity:0;}
+#content .meeting .meone:hover{ border-top:1px solid #999; border-bottom:1px solid #999; transition:0.2s;}
+#content .meeting .meone:hover .end{ opacity:1; transition:0.2s;}
+#content .meeting .metwo{width:333px; height:608px; float:left; margin-top:30px; border-left:1px solid #999;}
+#content .meeting .metwo .images{ margin-top:45px; margin-left:30px;}
+#content .meeting .metwo .date{ width:164px; height:31px; background:#FFF; margin-top:25px; margin-left:30px;}
+#content .meeting .metwo .time{ width:180px; height:80px; background:#FFF; margin-top:30px; margin-left:30px;}
+#content .meeting .metwo .time ul dt{ color:#FF8000; font-size:17px; font-style:italic;}
+#content .meeting .metwo .time ul dd{ color:#898989; font-size:17px; padding-top:5px;}
+#content .meeting .metwo .afternoon{ width:154px; height:65px; background:#FFF;margin-top:30px; margin-left:30px;}
+#content .meeting .metwo .afternoon ul dt{ color:#FF8000; font-size:17px; font-style:italic;}
+#content .meeting .metwo .afternoon ul dd{ color:#898989; font-size:17px; padding-top:5px;}
+#content .meeting .metwo .evening{width:230px; height:80px; background:#FFF;margin-top:30px; margin-left:30px;}
+#content .meeting .metwo .evening ul dt{ color:#FF8000; font-size:17px; font-style:italic;}
+#content .meeting .metwo .evening ul dd{ color:#898989; font-size:17px; padding-top:5px;}
+#content .meeting .metwo .wanshang{width:154px; height:60px; background:#FFF;margin-top:30px; margin-left:30px;}
+#content .meeting .metwo .wanshang ul dt{ color:#FF8000; font-size:17px; font-style:italic;}
+#content .meeting .metwo .wanshang ul dd{ color:#898989; font-size:17px; padding-top:5px;}
+#content .meeting .metwo .end{ width:200px; height:5px; background:#FF8000; margin-top:56px; margin-left:65px; opacity:0;}
+#content .meeting .metwo:hover{ border-top:1px solid #999; border-bottom:1px solid #999; transition:0.2s;}
+#content .meeting .metwo:hover .end{ opacity:1; transition:0.2s;}
+#content .meeting .methree{width:332px; height:608px; float:left; margin-top:30px; border-left:1px solid #999; border-right:1px solid #999;}
+#content .meeting .methree .images{ margin-top:45px; margin-left:30px;}
+#content .meeting .methree .date{ width:164px; height:31px; background:#FFF; margin-top:25px; margin-left:30px;}
+#content .meeting .methree .time{ width:180px; height:200px; background:#FFF; margin-top:30px; margin-left:30px;}
+#content .meeting .methree .time ul dt{ color:#07D9FE; font-size:17px; font-style:italic;}
+#content .meeting .methree .time ul dd{ color:#898989; font-size:17px; padding-top:5px;}
+#content .meeting .methree .time ul li{ color:#282828; font-size:15px; padding-top:3px;}
+#content .meeting .methree .afternoon{ width:154px; height:65px; background:#FFF;margin-top:30px; margin-left:30px;}
+#content .meeting .methree .afternoon ul dt{ color:#07D9FE; font-size:17px; font-style:italic;}
+#content .meeting .methree .afternoon ul dd{ color:#898989; font-size:17px; padding-top:5px;}
+#content .meeting .methree .evening{width:154px; height:60px; background:#FFF;margin-top:30px; margin-left:30px;}
+#content .meeting .methree .evening ul dt{ color:#07D9FE; font-size:17px; font-style:italic;}
+#content .meeting .methree .evening ul dd{ color:#898989; font-size:17px; padding-top:5px;}
+#content .meeting .methree .end{ width:200px; height:5px; background:#07D9FE; margin-top:45px; margin-left:65px; opacity:0;}
+#content .meeting .methree:hover{ border-top:1px solid #999; border-bottom:1px solid #999; transition:0.2s;}
+#content .meeting .methree:hover .end{ opacity:1; transition:0.2s;}
+#content .eend{ height:342px;  margin-top:10px;}
+#content .eend p.word{ height:85px; width:620px;  margin-top:20px; margin-left:190px; color:#000; font-size:36px; text-align:center; line-height:85px; }
+#content .eend .video{ height:195px; margin-top:25px;}
+#content .eend .video .videoA{ width:320px; height:191px; float:left; margin-left:0px;}
+#content .eend .video .videoA ul{ position:relative; }
+#content .eend .video .videoA ul li.bac{ width:320px; height:191px; background:url(images/play1.png) no-repeat center center; position:absolute; left:0px; top:0px; opacity:0;}
+#content .eend .video .videoA ul li.font{ height:55px; width:320px; background:rgba(0,0,0,.5); position:absolute; left:0px; bottom:4px;}
+#content .eend .video .videoA ul li.font ul li{ color:#FFF; font-size:18px; text-align:center; line-height:55px;}
+#content .eend .video .videoA ul:hover li.bac{ opacity:1; transition:0.2s;}
+#content .eend .video .videoA ul:hover li.font{ opacity:0; transition:0.2px;}
+#content .eend .video .videoB{ width:320px; height:191px; float:right;}
+#content .eend .video .videoB ul{ position:relative; }
+#content .eend .video .videoB ul li.bac{ width:320px; height:191px; background:url(images/play1.png) no-repeat center center; position:absolute; left:0px; top:0px; opacity:0;}
+#content .eend .video .videoB ul li.font{ height:55px; width:320px; background:rgba(0,0,0,.5); position:absolute; left:0px; bottom:4px;}
+#content .eend .video .videoB ul li.font ul li{ color:#FFF; font-size:18px; text-align:center; line-height:55px;}
+#content .eend .video .videoB ul:hover li.bac{ opacity:1; transition:0.2s;}
+#content .eend .video .videoB ul:hover li.font{ opacity:0; transition:0.2px;}
+#content .eend .video .videoC{ width:320px; height:191px; float:left; margin-left:20px;}
+#content .eend .video .videoC ul{ position:relative; }
+#content .eend .video .videoC ul li.bac{ width:320px; height:191px; background:url(images/play1.png) no-repeat center center; position:absolute; left:0px; top:0px; opacity:0;}
+#content .eend .video .videoC ul li.font{ height:55px; width:320px; background:rgba(0,0,0,.5); position:absolute; left:0px; bottom:4px;}
+#content .eend .video .videoC ul li.font ul li{ color:#FFF; font-size:18px; text-align:center; line-height:55px;}
+#content .eend .video .videoC ul:hover li.bac{ opacity:1; transition:0.2s;}
+#content .eend .video .videoC ul:hover li.font{ opacity:0; transition:0.2px;}
+
+#footer{ height:52px; background:#E7E7E7; width:100%;}
+#footer ul li.onea{ float:left; margin-top:15px;}
+#footer ul li.twoa{ float:right; margin-top:10px; }
+</style>
+</head>
+
+<body>
+<!--header begin-->
+<div id="header">
+ 
+    <div class="nav">
+        <div class="logo">
+            <img src="images/a.jpg" />
+        </div>
+        <div class="navigation ">
+           <ul>
+              <li><a href="index-2.html">首页</a></li>
+              <li><a href="erji-4.html">手机系列</a>
+                 <ul>
+                     <li><a href="#">XPlay系列</a></li>
+                     <li><a href="#">X系列</a></li>
+                     <li><a href="#">Y系列</a></li>
+                 </ul>
+              </li>
+              <li><a href="erji-3.html">Flyme平台</a></li>
+              <li><a href="erji-1.html">商场</a></li>
+              <li><a href="erji-2.html">服务</a></li>
+           </ul>
+        </div>
+        <div class="login">
+           <ul>
+             <li>登录<span>注册</span></li>
+             <li class="a"><img src="images/b.jpg" /></li>
+           </ul>
+        </div>
+    </div>
+    
+</div>
+<!--header end-->
+<!--banner begin-->
+<div id="banner">
+    <div class="clear"></div>
+    <div class="date">
+      <ul>
+       <li><a href=""><img src="images/eli.jpg" /></a></li>
+      </ul> 
+    </div>
+  
+</div>
+<!--banner end-->
+<!--content begin-->
+<div id="content">
+  <div class="center">
+     <div class="top">
+        <div class="left">
+           <ul>
+              <li><a href="#"><img src="images/play.png" /></a></li>
+              <li class="font"></li>
+           </ul>
+        </div>
+        <div class="right">
+          <ul>
+             <dt>大会介绍</dt>
+             <dd>2017运营转型峰会将是一次汇聚业界思想精萃的行业盛会。来自全球领先运营商、标准组织、咨询顾问公司等机构的业界领袖将齐聚一堂，交流对话、激荡思维、启发思路。我们还将分享华为和全球领先运营商的联合创新，展示转型成果。</dd>
+          </ul>
+        </div>
+     </div> 
+      
+     <div class="middle">
+      <div class="clear"></div>
+       <div class="mtop">
+          <li>在这次大会您将有机会:</li>
+       </div>
+       <div class="mdown">
+        
+            <div class="one">
+               <ul>
+                  <dt><img src="images/hong.jpg" /></dt>
+                  <dd></dd><dd></dd><dd></dd><dd></dd><dd></dd>
+                  <dd>通过真实的数字转型实践，</dd>
+                  <dd>实现敏捷运营</dd>
+               </ul>
+               <p></p>
+            </div>
+            <div>
+               <ul>
+                  <dt><img src="images/huang.jpg" /></dt>
+                  <dd></dd><dd></dd><dd></dd><dd></dd><dd></dd>
+                  <dd>洞悉颠覆未来的趋势，</dd>
+                  <dd>获悉最新解决方案</dd>
+               </ul>
+               <p></p>
+            </div>
+            <div>
+               <ul>
+                  <dt><img src="images/lu.jpg" /></dt>
+                  <dd></dd><dd></dd><dd></dd><dd></dd><dd></dd>
+                  <dd>受益于外部实践及方法</dd>
+                  <dd>拓展商业生态系统</dd>
+               </ul>
+               <p></p>
+            </div>
+            <div class="two">
+               <ul>
+                  <dt><img src="images/blue.jpg"/></dt>
+                  <dd></dd><dd></dd><dd></dd><dd></dd><dd></dd>
+                  <dd>利用最新数字技术，</dd>
+                  <dd>实现商业增长</dd>
+               </ul>
+               <p></p>
+            </div>
+         
+       </div>
+     </div>
+     <div class="middleA">
+        <ul class="mleft">
+           <li class="font">
+              <ul>
+                 <li><a href="#">了解更多</a></li>
+              </ul>
+           </li>
+           <li><img src="images/yqwl.jpg" /></li>
+        </ul>
+         <ul>
+           <li class="font">
+              <ul>
+                 <li><a href="#">了解更多</a></li>
+              </ul>
+           </li>
+           <li><img src="images/zhih.jpg"/></li>
+        </ul>
+         <ul class="mright">
+           <li class="font">
+              <ul>
+                 <li><a href="#">了解更多</a></li>
+              </ul>
+           </li>
+           <li><img src="images/yjs.jpg" /></li>
+        </ul>
+     </div>
+     <div class="welcome">
+       <div class="clear"></div>
+       <p class="wel">
+          邀请函
+       </p>
+       <div class="come">
+          <div class="clear"></div>
+          <div class="left">
+            <p>
+               我谨代表华为公司诚挚邀请您参加9月18至19日在中国香港举办的2017运营转型峰会（OTF 2017）。
+            </p>
+            <p>
+               运营转型峰会是华为与运营商及产业伙伴密切合作的平台，致力于帮助运营商实现运营转型和商业增长。在去年中国乌镇的峰会上，与会者一致认为数字化转型势在必行，因为它不仅是商业目标，更是发展一切数字业务的基础。基于这一共识，乌镇峰会结束后，许多与会者不断探索转型之路。
+            </p>
+            <p>
+               在全球范围内，运营商在各自的转型道路上已经取得可观进展，然而许多问题仍需得到更好的解决。为了应对机遇与挑战，汲取业界优秀经验成果，此次峰会将聚焦以下几大方面：发展视频、B2B业务，获得新增长；迈向全云化，实现更敏捷的数字化运营；体验建网，进一步激发网络价值。同时，我们也将探讨产业生态系统如何更好的开放协作，加速转型进程。
+            </p>
+            <p>
+               今秋九月，期待与您相聚香港！
+            </p>
+          </div>
+          <div class="right">
+             <p>
+                <img src="images/welcome.jpg" />
+             </p>
+             <div class="name">
+               <ul>
+                  <dt>丁耘</dt>
+                  <dd></dd><dd></dd><dd></dd>
+                  <dd>常务董事</dd>
+                  <dd>运营商BG总裁</dd>
+                  <dd>华为技术有限公司</dd>
+               </ul>
+             </div>
+          </div>
+       </div>
+     </div>
+     <div class="meeting">
+       <div class="clear"></div>
+       <p>大会议程</p>
+       <div class="meone">
+         <div class="images">
+           <img src="images/oneaaaaaa.jpg" />
+         </div>
+         <div class="date">
+            <span style="color:#000; font-size:20px; font-weight:700;">9月17日</span>
+            <span>&nbsp | &nbsp </span>
+            <span style="color:#1D1D1D; font-size:17px;">到达日</span>
+         </div>
+         <div class="time">
+           <ul>
+              <dt>全天</dt>
+              <dd>嘉宾抵达及峰会注册</dd>
+           </ul>
+         </div>
+         <div class="afternoon">
+            <ul>
+               <dt>下午</dt>
+               <dd>区域峰会</dd>
+               <dd>展厅参观</dd>
+            </ul>
+         </div>
+         <div class="evening">
+            <ul>
+               <dt>晚上</dt>
+               <dd>欢迎酒会</dd>
+            </ul>
+         </div>
+         <div class="end">
+         </div>
+       </div>
+       <div class="metwo">
+          <div class="images">
+           <img src="images/twobbbbb.jpg" />
+         </div>
+          <div class="date">
+            <span style="color:#000; font-size:20px; font-weight:700;">9月18日</span>
+            <span>&nbsp | &nbsp </span>
+            <span style="color:#1D1D1D; font-size:17px;">第一日</span>
+         </div>
+          <div class="time">
+           <ul>
+              <dt>上午</dt>
+              <dd>欢迎致辞</dd>
+              <dd>转型，向数字商业迈进</dd>
+           </ul>
+         </div>
+          <div class="afternoon">
+            <ul>
+               <dt>中午</dt>
+               <dd>展厅参观及午餐</dd>
+            </ul>
+         </div>
+          <div class="evening">
+            <ul>
+               <dt>下午</dt>
+               <dd>敏捷运营，从愿景到现实</dd>
+               <dd>效率优化，数字时代的新举措</dd>
+            </ul>
+         </div>
+          <div class="wanshang">
+            <ul>
+               <dt>晚上</dt>
+               <dd>晚宴</dd>
+            </ul>
+          </div>
+          <div class="end"></div>
+       </div>
+       <div class="methree">
+         <div class="images">
+           <img src="images/three.jpg" />
+         </div>
+         <div class="date">
+            <span style="color:#000; font-size:20px; font-weight:700;">9月19日</span>
+            <span>&nbsp | &nbsp </span>
+            <span style="color:#1D1D1D; font-size:17px;">第二日</span>
+         </div>
+         <div class="time">
+           <ul>
+              <dt>上午</dt>
+              <dd>分论坛及圆桌</dd>
+              <dd>转型，向数字商业迈进</dd>
+              <li></li><li></li>             
+              <li>· 数字业务使能新增长</li>
+              <li>· 敏捷数字化运营</li>
+              <li>· 全云化基础设施转型</li>
+              <li>· 激发网络价值</li>
+              <li>· 运维效率优化</li>
+           </ul>
+         </div>
+         <div class="afternoon">
+            <ul>
+               <dt>中午</dt>
+               <dd>展厅参观及午餐</dd>
+            </ul>
+         </div>
+         <div class="evening">
+            <ul>
+               <dt>下午</dt>
+               <dd>数字化转型体验之旅</dd>
+            </ul>
+         </div>
+         <div class="end"></div>
+       </div>
+     </div>
+     <div class="eend">
+       <div class="clear"></div>
+        <p class="word">
+            2016运营转型峰会的精彩瞬间
+        </p>
+        <div class="video">
+          <div class="videoA">
+             <ul>
+              <a href="#">
+                <li class="bac"></li>
+                <li><img src="images/ugm_homepage.jpg" /></li>
+                <li class="font">
+                    <ul>
+                       <li>
+                         Telecoms精彩回顾
+                       </li>
+                    </ul>
+                </li>
+               </a>
+             </ul>
+          </div>
+          <div class="videoC">
+             <ul>
+              <a href="#">
+                <li class="bac"></li>
+                <li><img src="images/lincoln_university_homepage.png" /></li>
+                <li class="font">
+                    <ul>
+                       <li>
+                         Mobile World Live精彩回顾
+                       </li>
+                    </ul>
+                </li>
+               </a>
+             </ul>
+          </div>
+          <div class="videoB">
+             <ul>
+              <a href="#">
+                <li class="bac"></li>
+                <li><img src="images/ajb_homepage.png" /></li>
+                <li class="font">
+                    <ul>
+                       <li>
+                         Light Reading精彩回顾
+                       </li>
+                    </ul>
+                </li>
+               </a>
+             </ul>
+          </div>
+        </div>
+        
+     </div>
+     
+  </div>
+</div>
+<!--content end-->
+<!--footer begin-->
+ <div id="footer">
+   <div class="center">
+      <div class="zh">
+        <ul>
+          <li class="onea"><img src="images/endooobne.png" /></li>
+          <li class="twoa"><img src="images/endddddd.png" /></li>
+        </ul>
+      </div>
+   </div>
+ </div>
+<!--footer end-->
+</body>
+</html>

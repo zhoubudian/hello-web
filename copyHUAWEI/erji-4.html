@@ -1,0 +1,372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link type="text/css" rel="stylesheet" href="css/reset.css" />
+<style>
+body{ background:#f7f7f7;}
+#header .nav{  height:78px; background:#FFF; width:1349px; }
+#header .nav .logo{ width:192px; height:58px; float:left; margin-left:15px; margin-top:15px;}
+#header .nav .navigation{ width:625px; height:78px;  margin-left:10px; float:left; position:relative; z-index:100;}
+#header .nav .navigation ul li{ position:relative; float:left; width:125px; height:75px;  }
+#header .nav .navigation ul li a{ width:125px; height:75px;  display:block; font-size:16px; font-weight:bold; line-height:75px; text-align:center; color:#000;text-decoration:none;}
+#header .nav .navigation ul li ul{position:absolute; left:0; top:76px;font-size:16px; font-weight:200; display:none;height:225px;}
+#header .nav .navigation ul li ul li a{ border:1px solid #CCC; border-top:none; background:#FFF;}
+#header .nav .navigation ul li:hover{ border-bottom:2px solid #e94a2b; color:#e94a2b; transition:0.1s;}
+#header .nav .navigation ul li:hover ul{display:block;transition:0.1s;}
+#header .nav .login{ width:111px; height:78px;  float:right; margin-right:10px;}
+#header .nav .login ul li{ padding-top:5px; font-size:14px; text-decoration:none; padding-left:10px; color:#000;}
+#header .nav .login ul li span{ padding-left:30px;}
+#header .nav .login ul li.a{ float:right; margin-right:10px;}
+
+#banner .photo{ height:720px; width:100%;   margin-top:10px; }
+#banner .photo .left{ height:720px; width:660px; float:left;}
+#banner .photo .left .top{ width:660px; height:353px; }
+#banner .photo .left .top .tleft{ width:180px; height:353px; float:left; background:#FFF;}
+#banner .photo .left .top .tright{ float:right;}
+#banner .photo .left .top .tleft .tltop{ width:140px; height:118px;  margin-left:40px; margin-top:70px;}
+#banner .photo .left .top .tleft .tltop ul dt{ color:#000; font-size:30px; padding-left:10px;}
+#banner .photo .left .top .tleft .tltop ul dd{ color:#999; font-size:14px;  padding-top:5px; padding-left:10px;}
+#banner .photo .left .top .tleft .tldown{ width:95px; height:32px; background:#43a568; border-radius:20px; margin-top:25px; margin-left:45px;}
+#banner .photo .left .top .tleft .tldown li{text-align:center;}
+#banner .photo .left .top .tleft .tldown li a{ color:#FFF; font-size:12px; line-height:32px; }
+#banner .photo .left .top .tleft .tldown li a:hover{ text-decoration:none;}
+#banner .photo .left .top:hover .tright img{ transform:scale(1.02); transition:0.2s;}
+#banner .photo .left .down{ width:660px; height:353px; background:#FFF; margin-top:15px;}
+#banner .photo .left .down .tleft{ width:237px; height:353px; float:right; background:#FFF;}
+#banner .photo .left .down  .tright{ float:left; margin-top:35px;}
+#banner .photo .left .down  .tleft .tltop{ width:160px; height:118px;  margin-left:0px; margin-top:85px;}
+#banner .photo .left .down  .tleft .tltop ul dt{ color:#000; font-size:30px; padding-left:10px;}
+#banner .photo .left .down  .tleft .tltop ul dd{ color:#999; font-size:14px;  padding-top:5px; padding-left:10px;}
+#banner .photo .left .down  .tleft .tldown{ width:95px; height:32px; background:#43a568; border-radius:20px; margin-top:50px; margin-left:10px;}
+#banner .photo .left .down  .tleft .tldown li{text-align:center;}
+#banner .photo .left .down  .tleft .tldown li a{ color:#FFF; font-size:12px; line-height:32px; }
+#banner .photo .left .down  .tleft .tldown li a:hover{ text-decoration:none;}
+#banner .photo .left .down:hover .tright img{ transform:scale(1.02); transition:0.2s;}
+#banner .photo .right{ width:332px; height:720px; background:#FFF; float:right;}
+#banner .photo .right .rtop{ width:174px; height:177px; background:#FFF; margin-left:30px; margin-top:60px;}
+#banner .photo .right .rdown{ margin-top:34px; margin-left:10px; width:312px; height:450px;}
+#banner .photo .right .rtop .rtone{ height:121px; width:174px; }
+#banner .photo .right .rtop .rtone ul dt{color:#000; font-size:30px; padding-left:10px; padding-top:5px;}
+#banner .photo .right .rtop .rtone ul dd{color:#999; font-size:14px;  padding-top:5px; padding-left:10px;}
+#banner .photo .right .rtop .rtwo{ width:95px; height:32px; background:#43a568; border-radius:20px; margin-top:50px; margin-left:10px;}
+#banner .photo .right .rtop .rtwo li{text-align:center; }
+#banner .photo .right .rtop .rtwo li a{ color:#FFF; font-size:12px; line-height:32px; }
+#banner .photo .right .rtop .rtwo li a:hover{ text-decoration:none;}
+#banner .photo .right .rdown:hover img{ transform:scale(1.02); transition:0.2s;}
+
+#content .line{ height:79px; border-bottom:1px solid #CCC;}
+#content .line .word{ height:20px; width:150px; background:#f7f7f7; margin-left:450px; padding-top:80px;}
+#content .line .word li{ text-align:center; color:#000; font-weight:500; font-size:24px; line-height:0px;}
+#content .xilie{ height:40px; margin-top:25px;}
+#content .xilie .left{width:235px; float:left; height:40px;}
+#content .xilie .left ul dt{ color:#000; font-size:18px; font-weight:600; float:left; line-height:40px; padding-left:10px;} 
+#content .xilie .left ul dd{ color:#999; font-size:16px; line-height:43px; margin-left:15px; float:left;padding-left:10px;}
+#content .xilie .right{ width:125px;  float:right; height:40px;}
+#content .xilie .right ul dt{ color:#000; font-size:20px; padding-top:10px; float:left;}
+#content .xilie .right ul dd{  width:25px; height:27px; padding-top:7px; float:right; padding-right:15px;}
+#content .photo{ height:384px; width:100%; }
+#content .photo ul span{ width:295px; height:384px; margin-top:2px; }
+#content .photo ul span.one{ float:left;}
+#content .photo ul span.two{ float:right;}
+#content .photo ul span.three{ float:left; margin-left:55px;}
+#content .photo ul span:hover{ box-shadow:0px 1px 20px #CCCCCC; margin-top:1px;}
+#content .endPhoto{ height:310px; margin-top:25px;}
+#content .endPhoto ul li{ padding-top:5px;}
+#content .endPhoto ul li.aone{ float:left;}
+#content .endPhoto ul li.atwo{ float:right; }
+#content .endPhoto ul li:hover img{ transform:scale(1.02);}
+
+#footer{ width:1346px; height:370px;  margin-top:5px;}
+#footer .ftop{ width:1346px; height:275px; border-bottom:2px solid #414141;}
+#footer .ftop .ftleft{ float:left; width:867px; height:275px; }
+#footer .ftop .ftleft .ftopone{ float:left; margin-left:80px; width:130px; height:260px;}
+#footer .ftop .ftleft .ftopone .ftone{padding-top:20px; width:76px; height:50px; font-size:18px; color:#000;width:130px;}
+#footer .ftop .ftleft .ftopone ul{ width:130px;  margin-top:5px; height:200px; }
+#footer .ftop .ftleft .ftopone ul li{ margin-top:3px;}
+#footer .ftop .ftleft .ftopone ul li a{ color:#000; font-size:16px; }
+#footer .ftop .ftright{ width:168px; height:270px; float:right;  margin-right:270px;}
+#footer .ftop .ftright ul li.ftra{ font-size:18px; color:#000; margin-top:20px; margin-left:10px;}
+#footer .ftop .ftright ul li.ftrb{ margin-top:10px; margin-left:10px;}
+#footer .ftop .ftright ul li.ftrc{ margin-top:10px; margin-left:10px;}
+#footer .ftop .ftright ul li.ftrd{ margin-top:10px; margin-left:10px; color:#000; font-size:18px;}
+#footer .fdown{ widows:1346px; height:93px;}
+#footer .fdown .fdone{ width:500px; height:93px; float:left;}
+#footer .fdown .fdone li{ margin-left:80px; line-height:93px; color:#000; font-size:14px;}
+#footer .fdown .fdone li a{ padding-left:15px; color:#000;}
+#footer .fdown .fdtwo{ width:250px; height:93px; float:right; margin-right:80px;}
+#footer .fdown .fdtwo ul li{ width:75px;  font-size:14px; color:#000; border-right:2px solid #000; float:left; margin-top:40px; padding-left:5px; line-height:14px;}
+#footer .fdown .fdtwo ul li.enda{ border-right:none; }
+</style>
+</head>
+
+<body>
+<!--header begin-->
+<div id="header">
+ 
+    <div class="nav">
+        <div class="logo">
+            <img src="images/a.jpg" />
+        </div>
+        <div class="navigation ">
+           <ul>
+              <li><a href="index-2.html">首页</a></li>
+              <li><a href="erji-4.html">手机系列</a>
+                 <ul>
+                     <li><a href="#">XPlay系列</a></li>
+                     <li><a href="#">X系列</a></li>
+                     <li><a href="#">Y系列</a></li>
+                 </ul>
+              </li>
+              <li><a href="erji-3.html">Flyme平台</a></li>
+              <li><a href="erji-1.html">商场</a></li>
+              <li><a href="erji-2.html">服务</a></li>
+           </ul>
+        </div>
+        <div class="login">
+           <ul>
+             <li>登录<span>注册</span></li>
+             <li class="a"><img src="images/b.jpg" /></li>
+           </ul>
+        </div>
+    </div>
+    
+</div>
+<!--header end-->
+
+<!--banner begin-->
+ <div id="banner">
+    <div class="center">
+    
+       <div class="photo">
+          <div class="left">
+             <div class="top">
+             
+                <div class="tleft">
+                   <div class="tltop">
+                     <ul>
+                        <dt>R11</dt>
+                        <dd></dd><dd></dd><dd></dd>
+                        <dd>唯美自然的人像模式</dd>
+                        <dd>骁龙 660</dd>
+                        <dd>Flyme 3.1</dd>
+                     </ul>
+                   </div>
+                   <div class="tldown">
+                     <li><a href="#">了解更多</a></li>
+                   </div>
+                </div>
+                
+                <div class="tright">
+                   <img src="images/sjia.jpg" />
+                </div>
+                
+             </div>
+             
+             <div class="down">
+             
+                <div class="tleft">
+                   <div class="tltop">
+                     <ul>
+                        <dt>R9s/R9sPIUS</dt>
+                        <dd></dd><dd></dd><dd></dd>
+                        <dd>唯美自然的人像模式</dd>
+                        <dd>骁龙 660</dd>
+                        <dd>Flyme 3.1</dd>
+                     </ul>
+                   </div>
+                   <div class="tldown">
+                     <li><a href="#">了解更多</a></li>
+                   </div>
+                </div>
+                
+                <div class="tright">
+                   <img src="images/sjiahd.jpg" />
+                </div>
+                
+             </div>
+             
+          </div>
+          <div class="right">
+             <div class="rtop">
+                <div class="rtone">
+                   <ul>
+                     <dt>X77</dt>
+                     <dd></dd><dd></dd><dd></dd>
+                     <dd>1600万臻美自拍</dd>
+                     <dd>4G运行+64G内存</dd>
+                     <dd>时尚一体化设计</dd>
+                   </ul>
+                </div>
+                <div class="rtwo">
+                  <li><a href="#">了解更多</a></li>
+                </div>
+             </div>
+             <div class="rdown">
+                 <img src="images/ajsdjka.jpg" />
+             </div>
+          </div>
+          
+       </div>
+       
+    </div>
+ </div>
+<!--banner end-->
+
+<!--content begin-->
+<div id="content">
+  <div class="center">
+  
+     <div class="line">
+         <div class="word">
+            <li>产品系列</li>
+         </div>
+     </div>
+     
+     <div class="xilie">
+       <div class="left">
+          <ul>
+             <dt>X系列</dt>
+             <dd>纤薄设计·至美外观</dd>
+          </ul>
+       </div>
+       <div class="right">
+         <ul>
+            <dt>查看更多</dt>
+            <dd><a href=""><img src="images/ckgd.jpg" /></a></dd>
+         </ul>
+       </div>
+     </div>
+     
+     <div class="photo">
+       <ul>
+          <span class="one"><img src="images/hbb.jpg" /></span>
+          <span class="three"><img src="images/hd.jpg" /></span>
+          <span class="two"><img src="images/hcc.jpg" /></span>
+       </ul>
+     </div>
+     
+     <div class="xilie">
+       <div class="left">
+          <ul>
+             <dt>Y系列</dt>
+             <dd>纤薄设计·至美外观</dd>
+          </ul>
+       </div>
+       <div class="right">
+         <ul>
+            <dt>查看更多</dt>
+            <dd><a href=""><img src="images/ckgd.jpg" /></a></dd>
+         </ul>
+       </div>
+     </div>
+     
+     <div class="photo">
+       <ul>
+          <span class="one"><img src="images/hbb.jpg" /></span>
+          <span class="three"><img src="images/hd.jpg" /></span>
+          <span class="two"><img src="images/hcc.jpg" /></span>
+       </ul>
+     </div>
+     
+     <div class="line">
+         <div class="word">
+            <li>产品特色</li>
+         </div>
+     </div>
+     
+     <div class="endPhoto">
+         <ul>
+            <li class="aone"><a href=""><img src="images/scong.jpg" /></a></li>
+            <li class="atwo"><a href=""><img src="images/pzhao.jpg" /></a></li>
+         </ul>
+     </div>
+     
+  </div>
+</div>
+<!--content end-->
+
+<!--footer begin-->
+    <div id="footer">
+       <div class="ftop">
+        <div class="ftleft">
+         <div class="ftopone">
+          <div class="ftone">按访问者</div>
+          <ul>
+             <li><a href="#">个人用户</a></li>
+             <li><a href="#">企业用户</a></li>
+             <li><a href="#">运营商用户</a></li>
+             <li><a href="#">新闻媒体</a></li>
+             <li><a href="#">合作伙伴</a></li>
+             <li><a href="#">开发者</a></li>
+             <li><a href="#">供应商</a></li>
+             <li><a href="#">求职者</a></li>
+          </ul>
+        </div>  
+        <div class="ftopone">
+          <div class="ftone">关于华为</div>
+          <ul>
+             <li><a href="#">公司简介</a></li>
+             <li><a href="#">公司治理</a></li>
+             <li><a href="#">运营商用户</a></li>
+             <li><a href="#">新闻媒体</a></li>
+             <li><a href="#">合作伙伴</a></li>
+             <li><a href="#">开发者</a></li>
+             <li><a href="#">供应商</a></li>
+             <li><a href="#">求职者</a></li>
+          </ul> 
+        </div>  
+        <div class="ftopone">
+          <div class="ftone">新闻 & 展会者</div>
+          <ul>
+             <li><a href="#">个人用户</a></li>
+             <li><a href="#">企业用户</a></li>
+             <li><a href="#">运营商用户</a></li>
+             <li><a href="#">新闻媒体</a></li>
+             <li><a href="#">合作伙伴</a></li>
+             <li><a href="#">开发者</a></li>
+             <li><a href="#">供应商</a></li>
+             <li><a href="#">求职者</a></li>
+          </ul>
+        </div>  
+        <div class="ftopone">
+          <div class="ftone">快速链接</div>
+          <ul>
+             <li><a href="#">华为商城</a></li>
+             <li><a href="#">荣耀官网 </a></li>
+             <li><a href="#">华为海洋</a></li>
+             <li><a href="#">产品定义社区</a></li>
+             <li><a href="#">合作伙伴</a></li>
+             <li><a href="#">开发者</a></li>
+             <li><a href="#">供应商</a></li>
+             <li><a href="#">求职者</a></li>
+          </ul>
+        </div>
+       </div>   
+        <div class="ftright">
+           <ul>
+               <li class="ftra">关注我们</li>
+               <li class="ftrb"><img src="images/wbin.jpg" /></li>
+               <li class="ftrc"><img src="images/wx.jpg" /></li>
+               <li class="ftrd">官方微信</li>
+           </ul>
+        </div>
+      </div>
+        <div class="fdown">
+          <div class="fdone">
+             <li>&copy 2017华为技术有限公司<a href="#">粤A2-20044005号</a></li>
+          </div>
+          <div class="fdtwo">
+             <ul>
+               <li>法律声明</li>
+               <li>隐私保护</li>
+               <li class="enda">联系我们</li>
+             </ul>
+          </div> 
+       </div>
+       
+    </div>
+<!--footer end-->
+</body>
+</html>

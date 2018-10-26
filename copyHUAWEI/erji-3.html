@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<style>
+#header{ width:100%; height:108px; background: url(images/bcksajd.jpg) repeat-x;}
+#header .topbj{ width:100%; height:28px; }
+#header .topbj ul{ width:100px; height:20px; float:right;  margin-right:0px; margin-top:10px;}
+#header .topbj ul li{width:40px; height:20px;  float:left; border-right:1px solid #b3b3b3;  line-height:20px; margin-left:5px;}
+#header .topbj ul li.tbone{border-right:none;}
+#header .topbj ul li a{ padding-left:5px; font-size:14px; color:#b3b3b3;}
+#header .downbj{ width:100%; height:80px;  }
+#header .downbj .logo{ width:235px; height:78px; margin-left:0px; float:left; margin-top:25px;}
+#header .downbj .nav{ width:690px; height:80px; background:#0CF; float:right; margin-right:0px; margin-top:15px;}
+#header .downbj .nav ul li{ width:115px; height:80px; float:left;text-align:center; background:#FFF; position:relative;}
+#header .downbj .nav ul li a{ color:#666; font-size:18px;  line-height:80px; }
+#header .downbj .nav ul li ul{ position:absolute; left:0; top:80px; display:none;}
+#header .downbj .nav ul li ul li{ border-bottom:1px solid #999;}
+#header .downbj .nav ul li a:hover{ color:#0CF; text-decoration:none;}
+#header .downbj .nav ul li:hover ul{ display:block;}
+
+
+#banner{ height:517px;  width:100%; background:url(images/bigphoto.jpg) repeat-x; margin-top:25px;}
+
+
+#content .publish{ height:294px; border-bottom:1px solid #999; width:100%; background:#fafafa; border:1px solid #999; border-left:none; border-right:none;}
+#content .publish ul div{ width:220px; height:294px; float:left; margin-left:40px;}
+#content .publish ul div.pubone{ margin-left:0;}
+#content .publish ul div.pubfour{ float:right;}
+#content .publish ul div ul li{ text-align:center; padding-top:20px;}
+#content .publish ul div ul li.pubonea{ width:175px; height:45px; margin-left:20px; }
+#content .publish ul div:hover{ transform:scale(1.01); transition:0.2s;}
+#content .data{ width:100%; height:368px; background:#FFF; border-bottom:1px solid #999;}
+#content .data .dataz{ width:1002px; height:347px;  margin-top:25px;}
+#content .data .dataz .phwr{ width:717px; height:347px; float:left; }
+#content .data .dataz .phwr .left{ float:left; width:345px; height:347px;}
+#content .data .dataz .phwr .right{ width:372px; height:347px; float:right;}
+#content .data .dataz .phwr .right .top{ height:173px; width:372px; background:#FFF;}
+
+#content .data .dataz .phwr .right .top ul li{  margin-left:20px;  padding-top:5px;}
+#content .data .dataz .phwr .right .top ul li.topone{ font-size:18px; color:#000; margin-left:20px; padding-top:10px;}
+#content .data .dataz .phwr .right .top ul li a{ color:#999; font-size:14px;}
+#content .data .dataz .phwr .right .top ul li a span{ padding-left:150px; font-size:12px;}
+#content .data .dataz .phwr .right .down{ height:173px; width:372px; background:#FFF; margin-top:2px;}
+#content .data .dataz .phwr .right .down ul{ padding-top:35px;}
+#content .data .dataz .phwr .right .down ul li{margin-left:20px; padding-top:5px;}
+#content .data .dataz .phwr .right .down ul li.downone{ font-size:18px; color:#000;  }
+#content .data .dataz .phwr .right .down ul li a{ color:#999; font-size:14px; }
+#content .data .dataz .phwr .right .down ul li a span{ padding-left:150px; font-size:12px;}
+#content .data .dataz .dalist{ width:285px; height:347px; float:right;}
+#content .data .dataz .dalist ul dt{ width:285px; height:62px; background:#00A7EB; color:#FFF; font-size:20px; line-height:62px; text-align:center;}
+#content .data .dataz .dalist ul dd{width:285px; height:70px; background:#00A7EB; color:#FFF; font-size:22px; line-height:70px;  border-bottom:1px solid #9fd7f8; background:#6bc0f7; }
+#content .data .dataz .dalist ul dd h2{ float:left; padding-left:25px; width:35px;}
+#content .sdk{ width:100%; height:368px; background:#fafafa; border-bottom:1px solid #999; }
+#content .sdk .roof{ width:1002px; height:368px;  }
+#content .sdk .roof .rk{ width:100%; height:40px;}
+#content .sdk .roof .rtop{ width:608px; height:103px;margin-left:200px;}
+#content .sdk .roof .rtop ul li{ line-height:40px; text-align:center; padding-top:5px;}
+#content .sdk .roof .rdown{ width:100%; height:202px;  margin-top:10px;}
+#content .sdk .roof .rdown ul div{ width:236px; height:190px; float:left; margin-left:75px;}
+#content .sdk .roof .rdown ul div ul li{ float:left;}
+#content .sdk .roof .rdown ul div ul li.photo{ padding-top:30px;}
+#content .sdk .roof .rdown ul div ul li ul dt{ padding-top:32px; height:40px;}
+#content .sdk .roof .rdown ul div ul li ul dd{ padding-top:5px;}
+#content .partner{ width:100%; height:179px; border-bottom:1px solid #666;}
+#content .partner .top{ height:80px; width:160px; margin-left:420px;}
+#content .partner .top li{ color:#000; text-align:center; line-height:100px; font-size:24px; font-weight:bold;}
+#content .partner .down{ height:59px; width:725px; margin-left:150px; margin-top:20px;}
+#content .partner .down ul li{ float:left; margin-left:10px;}
+
+#footer{ width:100%; height:95px; background:#E8E8E8; border-bottom:1px solid #333;}
+#footer .nav{ width:743px; height:51px;  margin-left:100px;}
+#footer .nav ul{ padding-top:25px; padding-left:25px;}
+#footer .nav ul li{ width:100px; height:21px; border-right:1px solid #666; text-align:center; line-height:20px; float:left; color:#000; font-weight:bold;}
+#footer .nav ul li.aone{ border-right:none;}
+#footer .banq{ width:648px; height:28px;  margin-left:150px;}
+#footer .banq li{ color:#999; text-align:center; line-height:28px;}
+</style>
+
+</head>
+
+<body>
+<!--header begin-->
+<div id="header">
+    <div class="center">
+       <div class="topbj">
+           <ul>
+              <li><a href="">登录</a></li>
+              <li class="tbone"><a href="">注册</a></li>
+           </ul>
+       </div>
+       <div class="downbj">
+           <div class="logo">
+               <img src="images/logo.jpg" />
+           </div>
+           <div class="nav">
+              <ul>
+                 <li><a href="index-2.html">首页</a></li>
+                 <li><a href="erji-4.html">手机系列</a>
+                 <ul>
+                     <li><a href="#">XPlay系列</a></li>
+                     <li><a href="#">X系列</a></li>
+                     <li><a href="#">Y系列</a></li>
+                 </ul>
+                 </li>
+                 
+                 <li><a href="erji-1.html">商场</a></li>
+                 <li><a href="erji-2.html">服务</a></li>
+                 <li><a href="nr-1.html">联系我们</a></li>
+                 <li><a href="">我的</a>
+                     <ul>
+                        <li><a href="#">我的应用</a></li>
+                        <li><a href="#">我的主题</a></li>
+                        <li><a href="#">我的壁纸</a></li>
+                     </ul>
+                 </li>
+              </ul>
+           </div>
+       </div>
+    </div>
+</div>
+<!--header end-->
+<!--banner begin-->
+  <div id="banner">
+     <div class="center">
+        
+     </div>
+  </div>
+<!--banner end-->
+<!--content begin-->
+  <div id="content">
+     <div class="publish">
+         <div class="center">
+          <ul>
+             <div class="pubone">
+               <ul>
+                 <li> <img src="images/fuone.jpg" /></li>
+                 <li style="color:#000; font-size:18px;">应用发布</li>
+                 <li style="color:#999; font-size:14px;" class="pubonea">提交您的应用类产品,我们将给予您全平台的推广资源。</li>
+               </ul>
+             </div>
+             <div>
+                <ul>
+                 <li> <img src="images/futwo.jpg" /></li>
+                 <li style="color:#000; font-size:18px;">游戏发布</li>
+                 <li style="color:#999; font-size:14px;" class="pubonea">提交您的应用类产品,我们将给予您全平台的推广资源。</li>
+               </ul>
+             </div>
+             <div>
+                 <ul>
+                 <li> <img src="images/futhree.jpg" /></li>
+                 <li style="color:#000; font-size:18px;">主题发布</li>
+                 <li style="color:#999; font-size:14px;" class="pubonea">提交您的应用类产品,我们将给予您全平台的推广资源。</li>
+               </ul>
+             </div>
+             <div class="pubfour">
+                <ul>
+                 <li> <img src="images/fufour.jpg"</li>
+                 <li style="color:#000; font-size:18px;">消息推送</li>
+                 <li style="color:#999; font-size:14px;" class="pubonea">提交您的应用类产品,我们将给予您全平台的推广资源。</li>
+               </ul>
+             </div>
+          </ul>
+        </div>
+      </div>
+     <div class="data">
+       <div class="center";>
+           <div class="dataz">
+               <div class="phwr">
+                  <div class="left">
+                     <img src="images/phwr.jpg" />
+                  </div>
+                  <div class="right">
+                     <div class="top">
+                        <ul>
+                           <li class="topone">社区热帖</li>
+                           <li><a>技术开放日第五期<span>2016/10/26</span></a></li>
+                           <li><a>技术开放日第五期<span>2016/10/26</span></a></li>
+                           <li><a>技术开放日第五期<span>2016/10/26</span></a></li>
+                           <li><a>技术开放日第五期<span>2016/10/26</span></a></li>
+                           <li><a>技术开放日第五期<span>2016/10/26</span></a></li>
+                        </ul>
+                     </div>
+                     <div class="down">
+                        <ul>
+                           <li class="downone">开发者引导</li>
+                           <li><a>技术开放日第五期<span>2016/10/26</span></a></li>
+                           <li><a>技术开放日第五期<span>2016/10/26</span></a></li>
+                           <li><a>技术开放日第五期<span>2016/10/26</span></a></li>
+                           <li><a>技术开放日第五期<span>2016/10/26</span></a></li>
+                           
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="dalist">
+                    <ul>
+                        <dt>如何加入Flyme开发者</dt>
+                        <dd><h2>1</h2>注册Flyme账号</dd>
+                        <dd><h2>2</h2>认证成为Flyme开发者</dd>
+                        <dd><h2>3</h2>发布应用/接入服务</dd>
+                        <dd><h2>4</h2>管理您的应用/服务</dd>
+                    </ul>
+               </div>
+           </div>
+       </div>
+     </div> 
+     <div class="sdk">
+        <div class="center">
+          <div class="roof">
+            <div class="rk"></div>
+            <div class="rtop">
+                <ul>
+                   <li style="color:#000; font-size:24px; font-weight:bold;">开发平台服务</li>
+                   <li style="color:#666; font-size:16px;">整合Flyme系统及资源,提供开发接入支持,产品上线发布,产品运营推广等综合服务</li>
+                </ul>
+            </div>
+            
+            <div class="rdown">
+               <ul>
+               
+                 <div>
+                    <ul>
+                      <li class="photo"><img src="images/onnnne.jpg" /></li>
+                      <li>
+                         <ul>
+                            <dt style="color:#000; font-size:18px;" class="onnne">开发服务</dt>
+                            <dd style="color:#666; font-size:16px;" >Flyme账号</dd>
+                            <dd style="color:#666; font-size:16px;">游戏SDK</dd>
+                            <dd style="color:#666; font-size:16px;">主题制作</dd>
+                            <dd style="color:#666; font-size:16px;">ROM适配</dd>
+                         </ul>
+                      </li>
+                    </ul>
+                 </div>
+                 
+                 <div>
+                    <ul>
+                      <li class="photo"><img src="images/twwwwwo.jpg" /></li>
+                      <li>
+                         <ul>
+                            <dt style="color:#000; font-size:18px;" class="onnne">产品发布</dt>
+                            <dd style="color:#666; font-size:16px;" >Flyme账号</dd>
+                            <dd style="color:#666; font-size:16px;">游戏SDK</dd>
+                            <dd style="color:#666; font-size:16px;">主题制作</dd>
+                            <dd style="color:#666; font-size:16px;">ROM适配</dd>
+                         </ul>
+                      </li>
+                    </ul>
+                 </div>
+                 
+                 <div>
+                    <ul>
+                      <li class="photo"><img src="images/thhhhrre.jpg" /></li>
+                      <li>
+                         <ul>
+                            <dt style="color:#000; font-size:18px;" class="onnne">产品推广</dt>
+                            <dd style="color:#666; font-size:16px;" >Flyme账号</dd>
+                            <dd style="color:#666; font-size:16px;">游戏SDK</dd>
+                            <dd style="color:#666; font-size:16px;">主题制作</dd>
+                            <dd style="color:#666; font-size:16px;">ROM适配</dd>
+                         </ul>
+                      </li>
+                    </ul>
+                 </div>
+                 
+               </ul>
+            </div>
+            
+          </div>
+        </div>
+     </div>
+     
+     <div class="partner">
+       <div class="center">
+          <div class="top">
+              <li>合作伙伴</li>
+          </div>
+          <div class="down">
+            <ul>
+               <li><img src="images/baidu.jpg" /></li>
+               <li><img src="images/txun.jpg" /></li>
+               <li><img src="images/quna.jpg" /></li>
+               <li><img src="images/xcheng.jpg" /></li>
+               <li><img src="images/qichezjia.jpg" /></li>
+            </ul>
+          </div>
+       </div>
+     </div>
+     
+  </div>
+<!--content end-->
+<!--footer begin-->
+  <div id="footer">
+    <div class="center">
+    
+       <div class="nav">
+          <ul>
+             <li>首页</li>
+             <li>Flyme首页</li>
+             <li>联系我们</li>
+             <li>法律声明</li>
+             <li>开放平台</li>
+             <li>广告媒体</li>
+             <li class="aone">Flyme平台</li>
+          </ul>
+       </div>
+       
+       <div class="banq">
+         <li>&copy 2017 Meizu Telecom Equipment Co., Ltd. All rights reserved. 经营许可证编号：粤B2-20130198</li>
+       </div>
+       
+    </div>
+  </div>
+<!--footer end-->
+</body>
+</html>
