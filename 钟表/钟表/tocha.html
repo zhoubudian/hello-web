@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+    li{
+        list-style: none;
+    }
+     #tocha{
+         width:300px;
+         height:50px;
+         border:1px solid #000;
+         margin:50px auto;
+         position: relative;
+         overflow: hidden;
+     }
+
+     #tocha ul{
+         width:600px;
+         height:50px;
+         position:absolute;
+         left:0;
+         top:0;
+     }
+
+     #tocha ul li{
+         width:120px;
+         height:50px;
+         text-align: center;
+         line-height: 50px;
+         float: left;
+         
+     }
+    </style>
+</head>
+<body>
+    <div id="tocha">
+        <ul id="inner">
+            <li>今天11月01日</li>
+            <li>明天11月02日</li>
+            <li>后天11月03日</li>
+            <li>周日11月04日</li>
+            <li>周一11月05日</li>
+        </ul>
+    </div>
+
+    <script>
+      /* var oUl = document.getElementById('inner'),
+          oTocha = document.getElementById('tocha');
+
+      oUl.onmousedown = function(e){
+            var e = event || window.event;
+            var x0 = oUl.offsetLeft;
+            console.log('x0=>'+x0);
+            var x1 = e.clientX;
+            console.log('x1=>'+x1);
+            
+            oTocha.onmousemove = function (e) { 
+                var e = event || window.event;
+                var x2 = e.clientX;
+                console.log('x2=>'+x2);
+                var x = x0 + (x2 - x1);
+                console.log('x=>'+x);
+                if(x>0){x = 0;}
+                if(x<-300){ x = -300;}
+                oUl.style.left = x + 'px';
+             }
+             oUl.onmouseup = function(){
+                oTocha.onmousemove = null;
+             }
+      } */
+      var oUl = document.getElementById('inner'),
+          oTocha = document.getElementById('tocha');
+      function load(){
+     
+     .addEventListener('touchstart',touch, false);
+     .addEventListener('touchmove',touch, false);
+     .addEventListener('touchend',touch, false);
+      
+     function touch (event){
+         var event = event || window.event;
+              
+         var oInp = document.getElementById("inp");
+         var distance,clientX_start,clientX_end,
+             minRange=10;
+             this.clientX_start;
+             this.direction;
+  
+             this.callbackFun=function(){
+             if(this.direction=='ltr') {
+                 console.log('从左往右');
+             }
+             else {
+                 console.log('从右往左');
+             }
+             }
+         switch(event.type){
+             case "touchstart":
+                 clientX_start=event.touches[0].clientX;
+                 this.clientX_start=clientX_start;
+                 break;
+             case "touchend":
+                 this.callbackFun();
+                 break;
+             case "touchmove":
+                 event.preventDefault();
+                
+                 clientX_end = event.changedTouches[0].clientX;
+                 //判断移动的方向
+                 distance=clientX_end-this.clientX_start;
+                 if(this.clientX_start+minRange<clientX_end) {
+                     this.direction='ltr';
+                 }
+                 else if(this.clientX_start-minRange>clientX_end){
+                     this.direction='rtl';
+                 }
+                 break;
+         }  
+     }
+ }
+  
+ window.addEventListener('load',load, false);
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            border: 10px ridge red;
+            margin: 100px auto;
+            box-sizing: border-box;
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+
+    </div>
+    <script>
+
+        function arrayRandom(array, index2) {
+            array.map(function (item, index) {
+                if (index != index2) {
+                    var x = parseInt(Math.random() * (array.length));
+                    if (x != index2) {
+                        array[index] = array[x]
+                        array[x] = item;
+                    }
+                }
+            })
+            return array;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            border: 10px ridge red;
+            margin: 100px auto;
+            box-sizing: border-box;
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+
+    </div>
+    <script>
+        function compare(v1, v2) {
+            var v1ar = v1.split('.');
+            var v2ar = v2.split('.');
+            // 依次比较版本每一位
+            for (var i = 0; i < 3; i++) {
+                var version = compareTo(v1ar[i], v2ar[i]);
+                if (version === 0) continue;
+                if (version === 1) return v2;
+                if (version === 2) return v1;
+            }
+            // 版本号相同
+            return true;
+        }
+
+        // a === b return 0
+        // a  <  b return 1
+        // a  >  b return 2
+        function compareTo(a, b) {
+            a = parseInt(a) || 0;
+            b = parseInt(b) || 0;
+            if (a === b) return 0;
+            if (a < b) return 1;
+            if (a > b) return 2;
+        }
+    </script>
+</body>
+
+</html>
