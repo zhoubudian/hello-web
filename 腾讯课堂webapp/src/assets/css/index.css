@@ -1,0 +1,472 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+#tit{
+    width:100%;
+    height:35px;
+    background: #fff;
+    position: fixed;
+    top:0;
+    left:0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    z-index:100;
+}
+#tit .pic{
+    flex: 1 1 0;
+    height:auto;
+    text-align: center;
+}
+#tit .pic img{
+    width:70%;
+    height:auto;
+    vertical-align: middle;
+}
+
+#tit .search{
+    flex: 6 1 0;
+}
+
+#tit .search .inp{
+    display: block;
+    width:90%;
+    height:25px;
+    margin:2px auto 0 auto;
+    border-radius: 5px;
+    border:none;
+    background: #F3F3F7;
+    background: url(../img/20181106215941.jpg) no-repeat;
+    background-size:100%;
+    padding-left:10px; 
+}
+#tit .search .inp:focus{
+    outline: none;
+}
+
+
+
+header{
+    width:100%;
+    height:67px;
+    border:1px solid #EEEDEF;
+    display: flex;
+    /* margin-top:5px; */
+}
+
+header .heaOne{
+    flex:1 1 0;
+    
+}
+
+header .heaOne img{
+    display: block;
+    width:80%;
+    height:80%;
+    margin:10% auto;
+}
+
+header .heaTwo{
+    flex: 4 1 0;
+}
+
+header .heaTwo img{
+    display: block;
+    width:90%;
+    height: 80%;
+    margin:6px auto;
+    border-left: 1px solid #EEEDEF;
+    padding-left: 10px;
+}
+
+main{
+    width:100%;
+    margin-bottom: 60px;
+    /* overflow: hidden; */
+}
+
+main #mainA{
+    width:100%;
+    height:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main #mainA .web,.pro,.live,.move{
+    text-align: center;
+}
+
+main #mainA .web{
+    flex: 2 1 0;
+    font-size: 1.4em;
+}
+main #mainA .web p{
+    text-align: center;
+    width:3px;
+    height:3px;
+    background: #00BAFF;
+    margin:3px auto;
+}
+main #mainA .pro{
+    flex: 2 1 0;
+    font-size: 0.9em;
+}
+main #mainA .live{
+    flex: 2 1 0;
+    font-size:0.9em;
+}
+main #mainA .move{
+    flex: 1 1 0;
+    font-size: 1.8em;
+}
+
+main #mainA .move a{   
+    color: #767676;
+}
+
+main #mainB{
+    width:100%;
+    overflow: hidden;
+}
+
+main #mainB .course{
+    width:90%;
+    /* height:90px; */
+    margin:0 auto;
+}
+
+#mainB .course .couA{
+    width:100%;
+    height: 95px;
+    display: flex;
+    margin-top: 5px;
+}
+
+#mainB .course .couA .couOne,.couTwo{
+    flex:1 1 0;
+}
+
+#mainB .course .couA .couOne img{
+    width:100%;
+    height:100%;
+}
+
+#mainB .course .couA .couTwo p.one{
+    height:21px;
+    overflow:hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+#mainB .course .couA .couTwo p.two{
+    margin-left: 10px;
+    margin-top:5px;
+}
+
+#mainB .course .couA .couTwo p.two{
+    margin-left: 10px;
+    margin-top:5px;
+}
+
+#mainB .course .couA .couTwo p.three{
+    margin-left: 10px;
+    margin-top:5px;
+    font-size: 0.8em;
+    color: #23C3FF;
+    font-weight: bold
+}
+
+#mainB .course .couA .couTwo p.three img{
+    width:10%;
+    height:auto;
+}
+#mainB .course .couA .couTwo p.three span{
+    color: #7A7A7A;
+    padding-left:10px; 
+}
+
+main #open{
+    width:100%;
+    margin-top:10px;
+    overflow: hidden;
+}
+
+main #open .openA{
+    width:100%;
+    height:40px;
+    text-align: center;
+    line-height:40px;
+    color: #767676;
+    letter-spacing: 4px;
+    font-size: 0.3rem;
+    position: relative;
+}
+
+main #open .openA .openUl{
+    width:20px;
+    height:20px;
+    position: absolute;
+    top:10px;
+    right:20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main #open .openA .openUl li{
+    width:5px;
+    height:5px;
+    border-radius: 50%;
+    background: #CACACA;
+}
+main #open .openA .openUl li:nth-child(2){
+    background: #7D7D7D;
+}
+main #open .openA .openUl li:nth-child(3){
+    background: #232323;
+}
+
+main #open .openB{
+    width:100%;
+    height:30px;
+    line-height: 30px;
+}
+main #open .openB .class{
+    float: left;
+    font-size: 0.7em;
+    text-align: center;
+    color: #BABABA;
+    margin-left: 5px;
+}
+
+main #open .openB .classList{
+    width:290px;
+    height:30px;
+    overflow: hidden; 
+    position: relative;
+}
+main #open .openB .classList .dirList{
+    display: flex;
+    width:800px;
+    height:30px;
+    position: absolute;
+    top:0;
+    left:0;
+    justify-content: space-around;
+    
+}
+main #open .openB .classList .dirList li{
+    text-align: center;
+    font-size: 0.8em;
+    text-align: center;
+    color: #BABABA;
+}
+
+main #open .openB .classList .dirList li:nth-child(1){
+    font-size: 0.9;
+    color: #000;
+    font-weight: bold;
+}
+
+main #open .openC{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+main #open .openC .openOne{
+    flex: 1 1 0;
+    font-size: 0.8em;
+    margin-left:5px;
+    color: #BABABA;
+}
+main #open .openC .openTwo{
+    flex: 10 1 0;
+}
+
+main #open .openC .openTwo ul{
+    display: flex;
+}
+
+main #open .openC .openTwo ul li{
+    font-size: 0.8em;
+    color: #BABABA;
+    margin:0 13px;
+}
+
+main #open .openC .openTwo ul li:nth-child(1){
+    color: #000;
+    font-weight: bold;
+}
+
+main #open .openD{
+    width:100%;
+    height:335px;
+}
+
+main #open .openD .Done{
+    width:95%;
+    height:335px;
+    margin:0 auto;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main #open .openD .Done li{
+    width:49%;
+    height:160px;
+    /* background: #00BAFF; */
+}
+main #open .openD .Done li.a .aOne{
+    width:100%;
+    height:90px;
+    margin: 0 auto;
+}
+main #open .openD .Done li.a img{
+    width:100%;
+    height:90px;
+    border-radius: 5px;
+}
+
+main #open .openD .Done li.a .aTwo{
+    width:100%;
+    height:25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.8em;
+    margin-top:10px;
+}
+main #open .openD .Done li.a .aThree{
+    color: #00BAFF
+}
+
+main #choic{
+    width:100%;
+    margin-top:10px;
+    overflow: hidden;
+}
+
+main #choic .choicA{
+    width:100%;
+    height:40px;
+    text-align: center;
+    line-height:40px;
+    color: #767676;
+    letter-spacing: 4px;
+    font-size: 0.3rem;
+    position: relative;
+}
+
+main #choic .choicA .choicUl{
+    width:20px;
+    height:20px;
+    position: absolute;
+    top:10px;
+    right:20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main #choic .choicA .choicUl li{
+    width:5px;
+    height:5px;
+    border-radius: 50%;
+    background: #CACACA;
+}
+main #choic .choicA .choicUl li:nth-child(2){
+    background: #7D7D7D;
+}
+main #choic .choicA .choicUl li:nth-child(3){
+    background: #232323;
+}
+
+main #choic .choicD{
+    width:100%;
+    /* height:335px; */
+}
+
+main #choic .choicD .Done{
+    width:95%;
+    /* height:335px; */
+    margin:0 auto;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main #choic .choicD .Done li{
+    width:49%;
+    height:160px;
+    /* background: #00BAFF; */
+}
+main #choic .choicD .Done li.a .aOne{
+    width:100%;
+    height:90px;
+    margin: 0 auto;
+}
+main #choic .choicD .Done li.a img{
+    width:100%;
+    height:90px;
+    border-radius: 5px;
+}
+
+main #choic .choicD .Done li.a .aTwo{
+    width:100%;
+    height:25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.8em;
+    margin-top:10px;
+}
+main #choic .choicD .Done li.a .aThree{
+    color: #00BAFF
+}
+
+footer{
+    width:100%;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    display: flex;
+    background: #fff;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #fff;
+}
+
+footer li{
+    color: #767676;
+    font-size: 0.9em;
+    width:34px;
+}
+
+footer li:nth-child(1){
+    color: #00BAFF;
+}
+
+footer li img{
+    width:25px;
+    height:27px;
+}

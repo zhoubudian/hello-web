@@ -1,0 +1,155 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+#tit{
+    width:100%;
+    height:35px;
+    background: #fff;
+    position: fixed;
+    top:0;
+    left:0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    z-index:100;
+    box-shadow: 0 1px 0 #ccc;
+}
+#tit .pic{
+    flex: 1 1 0;
+    height:auto;
+    text-align: center;
+}
+#tit .pic img{
+    width:70%;
+    height:auto;
+    vertical-align: middle;
+}
+
+#tit .search{
+    flex: 6 1 0;
+}
+
+#tit .search .inp{
+    display: block;
+    width:90%;
+    height:25px;
+    margin:2px auto 0 auto;
+    border-radius: 5px;
+    border:none;
+    background: #F3F3F7;
+    background: url(../img/20181106215941.jpg) no-repeat;
+    background-size:100%;
+    padding-left:10px; 
+}
+#tit .search .inp:focus{
+    outline: none;
+}
+
+main{
+    width:100%;
+    height:100%;
+    margin:35px 0 65px 0;
+    position: relative;
+}
+
+main nav{
+    width:25%;
+    height:100%;
+    position: fixed;
+    top:35px;
+    left:0;
+    background: #F0F0F5;
+}
+
+main nav ul{
+    display: flex;
+    flex-flow: column;
+}
+
+main nav ul li{
+    width:100%;
+    height:50px;
+    border-bottom: 1px solid #D5D5DA;
+    text-align: center;
+    line-height: 50px;
+    color: #767676;
+    font-size: 0.7em;
+}
+
+main nav ul li:nth-child(1){
+    /* background: #fff; */
+}
+
+main .dir{
+    width:75%;
+    /* background: #0ff; */
+    position: absolute;
+    top:0;
+    right: 0;
+    margin-bottom: 70px;
+    /* z-index: 10; */
+}
+
+main .dir .dirA{
+    width:90%;
+    height:155px;
+    margin: 0 auto;
+    border-bottom: 1px solid #DADADD;
+}
+
+main .dir .dirA .a{
+    font-size: 0.9em;
+}
+
+main .dir .dirA .b{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+main .dir .dirA .b li{
+    width:32%;
+    height:45px;
+    background: #F0F0F5;
+    border-radius: 5px;
+    margin-top:15px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 0.7em;
+    color: #000000;
+}
+
+footer{
+    width:100%;
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    display: flex;
+    background: #fff;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #fff;
+    z-index: 100;
+}
+
+footer li{
+    color: #767676;
+    font-size: 0.9em;
+}
+
+footer li:nth-child(1){
+    color: #00BAFF;
+}
