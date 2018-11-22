@@ -1,0 +1,748 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+header .shade {
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+    z-index: 30;
+}
+
+header .lb {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: url(../img/500414848.jpg) fixed center center no-repeat;
+    background-size: 100% 100%;
+}
+
+/* header .lb img.lbImg {
+    display: block;
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+    transition: 1s;
+}
+
+header .lb img:nth-child(1) {
+    opacity: 1;
+} */
+
+section{
+    position: absolute;
+    top:20px;
+    right: 0px;
+    z-index: 100;
+    
+
+}
+
+.nav-menu {
+    display: block;
+    background: #fff;
+    width: 680px;
+    margin: 0px auto;
+}
+
+.nav-menu>li {
+    display: inline;
+    float: left;
+    
+}
+
+.nav-menu>li:last-child {
+    border-right: none;
+}
+
+.nav-menu li a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-transform: capitalize;
+    overflow: visible;
+    padding: 15px 30px 15px 31px;
+    white-space: nowrap;
+    font: 20px/20px Arial;
+}
+
+/* animation domination */
+.three-d {
+    perspective: 200px;
+    transition: all .07s linear;
+    position: relative;
+}
+
+.three-d:not(.active):hover {
+    cursor: pointer;
+}
+
+.three-d:not(.active):hover .three-d-box,
+.three-d:not(.active):focus .three-d-box {
+    transform: translateZ(-25px) rotateX(90deg);
+}
+
+.three-d-box {
+    transition: all .3s ease-out;
+    transform: translatez(-25px);
+    transform-style: preserve-3d;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.front {
+    transform: rotatex(0deg) translatez(25px);
+}
+
+.back {
+    transform: rotatex(-90deg) translatez(25px);
+    color: #FFE7C4;
+}
+
+.front,
+.back {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+    padding: 15px 30px 15px 31px;
+    color: white;
+    pointer-events: none;
+    box-sizing: border-box;
+}
+
+.nav-menu li .active .front,
+.nav-menu li .active .back,
+.nav-menu li a:hover .front,
+.nav-menu li a:hover .back {
+    /* background-color: #51938f; */
+    background-size: 5px 5px;
+    background-position: 0 0, 30px 30px;
+    background-image: -*-linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480), linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480);
+}
+
+.nav-menu ul {
+    position: absolute;
+    text-align: left;
+    line-height: 40px;
+    font-size: 14px;
+    width: 100px;
+    transition: all 0.3s ease-in;
+    transform-origin: 0px 0px;
+    transform: rotateX(-90deg);
+    backface-visibility: hidden;
+}
+
+.nav-menu>li:hover ul {
+    display: block;
+    transform: rotateX(0deg);
+}
+
+header .head{
+    width:70px;
+    height:70px;
+    border-radius: 50%;
+    background: url(../img/head.jpg) center center;
+    position:absolute;
+    top:10px;
+    left:40px;
+    z-index:100;
+    box-sizing:border-box;
+    border: 1px solid #000;
+}
+
+header .card{
+    width:40%;
+    height:36%;
+    position: absolute;
+    top:32%;
+    left:30%;
+    z-index:100;
+}
+
+header .card:hover{
+    box-shadow: 0 0 20px #ccc;
+}
+
+header .card .cardImg{
+    display: block;
+    width:80%;
+    height:auto;
+    margin:15px auto;
+}
+
+header .card .cardUl{
+    text-align: center;
+    line-height: 35px;
+    font-size:20px;
+    color: #fff;
+}
+
+#about{
+    widows: 100px;
+    height: 320px;
+    background: #fff;
+}
+
+#about h1{
+    width:100%;
+    text-align: center;
+    margin-top:50px;
+}
+
+#about .aboutDiv{
+    width:60%;
+    margin:40px auto;
+    line-height:40px;
+}
+
+#about .aboutP{
+    width:60%;
+    margin:0 auto;
+}
+
+#skill{
+    width:100%;
+    height:500px;
+    background: url(../img/387960860444.jpg) fixed center center;
+    background-size: 100%,100%;
+    position: relative;
+}
+
+#skill .skiDiv{
+    width:100%;
+    height:500px;
+    background: rgba(0,0,0,.5);
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+#skill .skiDiv .skiH{
+    width:50%;
+    color:#fff;
+    text-align: center;
+    margin:40px auto 0 auto;
+}
+
+#skill .skiDiv .skiLine{
+    width:8%;
+    height:2px;
+    margin: 10px auto;
+    background: #fff;
+}
+
+#skill .skiDiv .skiUl{
+    width:60%;
+    height:200px;
+    margin:80px auto;
+}
+
+#skill .skiDiv .skiUl ul.ski{
+    width:100%;
+    height:200px;
+    display: flex;
+    justify-content: space-around;
+    /* perspective: 100px; */
+}
+
+#skill .skiDiv .skiUl ul.ski li{
+    width:20%;
+    background: rgba(0,0,0,.5);
+    text-align: center;
+    transition: 1s;
+}
+#skill .skiDiv .skiUl ul.ski li:hover{
+    box-shadow: 0 0 10px #ccc;
+    animation: moveIconUp ease 1s both 1;
+    /* transform-origin: center;
+    transform: rotate(360deg); */
+    /* -webkit-transform: rotate(360deg); */
+    /* transition: 1s; */
+}
+
+@keyframes moveIconUp{
+    0%{
+        transform: rotate(0deg);
+    }
+    /* 50%{
+        transform: rotate(180deg);
+    } */
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+#skill .skiDiv .skiUl ul.ski li img{
+    margin:50px 0 0 0;
+}
+#skill .skiDiv .skiUl ul.ski li p{
+    margin:20px 0 0 0;
+    color:#fff;
+}
+
+#skillBar{
+    width:100%;
+    height:200px;
+    background: #fff;
+}
+
+#skillBar .barUl{
+    width:80%;
+    height:100px;
+    margin:0 auto;
+    /* background: #000; */
+    display: flex;
+}
+
+#skillBar .barUl li.barLi{
+    width: 50%;
+    position: relative;
+}
+
+#skillBar .barUl li.barLi .barP{
+    margin-top:20px;
+}
+
+#skillBar .barUl li.barLi .barDiv{
+    width:80%;
+    height:30px;
+    margin-top: 10px; 
+    position: relative;
+}
+
+#skillBar .barUl li.barLi .barDiv .a{
+    width:100%;
+    height:30px;
+    background: url(../img/animated-overlay.gif) repeat-x;
+    background-size: 100% 100%;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+#skillBar .barUl li.barLi .barDiv .b{
+    width:0;
+    height:30px;
+    background: #074951;
+    position: absolute;
+    top:0;
+    left:0;
+    transition: 4s;
+}
+
+#skillBar .barUl li.barLiOne{
+    width:50%;
+    position: relative;
+}
+
+#skillBar .barUl li.barLiOne .barP{
+    margin-top:20px;
+}
+
+#skillBar .barUl li.barLiOne .barDiv{
+    width:80%;
+    height:30px;
+    margin-top: 10px; 
+    position: relative;
+}
+
+#skillBar .barUl li.barLiOne .barDiv .a{
+    width:100%;
+    height:30px;
+    background: url(../img/animated-overlay.gif) repeat-x;
+    background-size: 100% 100%;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+#skillBar .barUl li.barLiOne .barDiv .bb{
+    width:0;
+    height:30px;
+    background: #074951;
+    position: absolute;
+    top:0;
+    left:0;
+    transition: 3s;
+}
+
+
+#skillBar .barUlOne{
+    width:80%;
+    height:100px;
+    margin:0 auto;
+    /* background: #000; */
+    display: flex;
+}
+
+#skillBar .barUlOne li.barLi{
+    width: 50%;
+    position: relative;
+}
+
+
+
+#skillBar .barUlOne li.barLi .barP{
+    margin-top:20px;
+}
+
+#skillBar .barUlOne li.barLi .barDiv{
+    width:80%;
+    height:30px;
+    margin-top: 10px; 
+    position: relative;
+}
+
+#skillBar .barUlOne li.barLi .barDiv .a{
+    width:100%;
+    height:30px;
+    background: url(../img/animated-overlay.gif) repeat-x;
+    background-size: 100% 100%;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+#skillBar .barUlOne li.barLi .barDiv .bbb{
+    width:0;
+    height:30px;
+    background: #074951;
+    position: absolute;
+    top:0;
+    left:0;
+    transition: 3s;
+}
+
+#skillBar .barUlOne li.barLiOne{
+    width:50%;
+    position: relative;
+}
+
+
+#skillBar .barUlOne li.barLiOne .barP{
+    margin-top:20px;
+}
+
+#skillBar .barUlOne li.barLiOne .barDiv{
+    width:80%;
+    height:30px;
+    margin-top: 10px; 
+    position: relative;
+}
+
+#skillBar .barUlOne li.barLiOne .barDiv .a{
+    width:100%;
+    height:30px;
+    background: url(../img/animated-overlay.gif) repeat-x;
+    background-size: 100% 100%;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+#skillBar .barUlOne li.barLiOne .barDiv .bbbb{
+    width:0;
+    height:30px;
+    background: #074951;
+    position: absolute;
+    top:0;
+    left:0;
+    transition: 3s;
+}
+
+#work{
+    width:100%;
+    height:620px;
+    background: url(../img/umb.jpg) no-repeat  fixed;
+    background-size:100% 100%; 
+    position: relative;
+}
+
+#work .shade{
+    width:100%;
+    height:620px;
+    background: rgba(0,0,0,.5);
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+#work .works{
+    width:100%;
+    height:600px;
+    position: absolute;
+    top:0;
+    left:0;
+    
+}
+
+#work .works .tit{
+    width:100%;
+    height:60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    color: #fff;
+    margin-top:20px; 
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+#work .works .workShow{
+    width:100%;
+    height:480px;
+    margin-top:20px;
+    position: relative;
+}
+#work .works .workShow .workChange{
+    width:90%;
+    height:480px;
+    /* margin:0 auto; */
+    /* display: flex; */
+    position: absolute;
+    left:5%;
+    display: none;
+    /* display: block; */
+}
+
+#work .works .workShow .workChange .workPic{
+    width:60%;
+    height:480px;
+    /* background: #0ff; */
+    position:relative;
+    float: left;
+}
+
+#work .workChange .workPic img{
+    position: absolute;
+    display: block;
+    width:400px;
+    height: auto;
+    box-shadow: 0 2px 10px #000;
+    transition: 1s;
+}
+
+#work .workChange .workPic img:nth-child(1){
+    top:10px;
+    left:0;
+    z-index: 80;
+}
+
+#work .workChange .workPic img:nth-child(2){
+    top:100px;
+    left:110px;
+    z-index: 70;
+}
+
+#work .workChange .workPic img:nth-child(3){
+    top:190px;
+    left:220px;
+    z-index: 60;
+}
+
+#work .workChange .workPic img:nth-child(4){
+    top:280px;
+    left:325px;
+    z-index: 0;
+}
+
+#work .works .workShow .workChange .workDir{
+    width:40%;
+    height:280px;
+    /* background: #00f; */
+    margin-top:100px;
+    color: #fff;
+    float: right;
+}
+
+#work .workChange .workDir .workH2{
+    margin:10px 0 0 30px;
+}
+
+#work .workChange .workDir .workOne{
+    margin:10px 0 0 30px;
+    font-size:18px;
+    font-weight: bold;
+}
+#work .workChange .workDir .workOne span{
+    font-weight: normal;
+}
+
+#work .workChange .workDir .workTwo{
+    margin:10px 0 0 30px;
+    font-size:18px;
+    font-weight: bold;
+}
+#work .workChange .workDir .workThree{
+    margin:10px 0 0 30px;
+}
+#work .workChange .workDir .workFour{
+    margin:10px 0 0 30px;
+}
+#work .workChange .workDir .workFour a{
+    text-decoration: none;
+    color:#FFE7C4;
+}
+
+
+#work .works .workDot{
+    width:100%;
+    height:20px;
+}
+
+#work .works .workDot ul{
+    width:50%;
+    height:20px;
+    margin:0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#work .works .workDot ul li{
+    width:10px;
+    height:10px;
+    background: #ffffff;
+    border-radius: 50%;
+    margin-left:20px;
+}
+
+#work .works .workDot ul li:nth-child(1){
+    width:14px;
+    height:14px;
+    border-radius: 50%;
+}
+
+footer{
+    width:100%;
+    height:400px;
+}
+footer h2.fooOne{
+    text-align: center;
+    height:60px;
+    line-height: 60px;
+    margin-top:30px;
+}
+footer .fooTwo{
+    text-align: center;
+    width:40%;
+    margin:0 auto;
+    height:220px;
+    margin-top:10px;
+    overflow: hidden;
+}
+
+footer .fooTwo ul.fooA{
+    width:100%;
+    height:200px;
+    margin-top:20px;
+}
+
+footer .fooTwo ul.fooA li{
+    font-size: 18px;
+    line-height: 36px;
+}
+footer .fooB{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+footer .fooB img{
+    width:100%;
+    height:100%;
+    /* border-radius: 50%; */
+}
+footer .fooC{
+    text-align: center;
+    margin-top:30px;
+    color: #666;
+    font-size: 14px;
+}
+
+#back{
+    width:50px;
+    height:50px;
+    position: fixed;
+    bottom: 50px;
+    right:50px;
+    background: #4D4D4D url(../img/20181119145548.jpg) no-repeat center;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#topNav{
+    width:100%;
+    height:40px;
+    background: #EADFD7;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 100;
+    opacity: 0;
+}
+
+#topNav .topA{
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    float: left;
+    margin-left: 50px;
+}
+
+#topNav .topA img{
+    width:100%;
+    height:100%;
+}
+
+#topNav .topB{
+    width:500px;
+    height:30px;
+    float: right;
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
